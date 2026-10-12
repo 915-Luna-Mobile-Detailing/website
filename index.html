@@ -10,9 +10,10 @@
     content="Professional mobile car detailing in El Paso, Texas. Quality vehicle care brought to you."
   >
 
+  <meta name="theme-color" content="#F7F4EE">
   <title>915 Luna Mobile Detailing | El Paso, TX</title>
 
-  <!-- Load the Inter font -->
+  <!-- Inter font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -20,37 +21,368 @@
     rel="stylesheet"
   >
 
-  <!-- Connect our CSS -->
+  <!-- Our stylesheet -->
   <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
-  <header class="container">
-    <p>915 LUNA · MOBILE DETAILING</p>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main navigation">
+
+      <a class="brand" href="#home" aria-label="915 Luna home">
+        <span class="brand-name">915 LUNA</span>
+        <span class="brand-subtitle">MOBILE DETAILING</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#our-work">Our Work</a>
+        <a href="#faq">FAQ</a>
+        <a class="button button-small" href="#booking">Book Now</a>
+      </div>
+
+    </nav>
   </header>
 
+
   <main>
-    <section class="container section">
-      <p>PROFESSIONAL DETAILING · EL PASO, TEXAS</p>
 
-      <h1>Your car deserves a better kind of clean.</h1>
+    <!-- HERO: VIDEO BACKGROUND -->
+    <section class="hero" id="home">
 
-      <p>
-        Professional mobile detailing, delivered to your driveway.
-      </p>
+      <!--
+        Later, place your video in an images folder.
+        Replace the placeholder below with a video element.
+      -->
 
-      <a class="button" href="#packages">
-        Explore our packages
+      <div class="hero-placeholder" aria-hidden="true">
+        <span class="video-label">YOUR BRAND VIDEO GOES HERE</span>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+
+        <p class="eyebrow hero-eyebrow">
+          MOBILE DETAILING · EL PASO, TEXAS
+        </p>
+
+        <h1>
+          Your car deserves<br>
+          a better kind of clean.
+        </h1>
+
+        <p class="hero-description">
+          Professional vehicle care, delivered to your driveway.
+        </p>
+
+        <a class="button" href="#services">
+          Explore Our Services
+          <span aria-hidden="true">↗</span>
+        </a>
+
+        <p class="hero-note">
+          Convenient. Thoughtful. Detail-oriented.
+        </p>
+
+      </div>
+
+      <a class="scroll-cue" href="#services">
+        Discover more <span aria-hidden="true">↓</span>
       </a>
+
     </section>
 
-    <section id="packages" class="container section">
-      <h2>Find the right detail for your car.</h2>
 
-      <p>
-        We're preparing our service packages. Check back soon.
+    <!-- INTRODUCTION -->
+    <section class="intro section container">
+
+      <p class="eyebrow">THE 915 LUNA EXPERIENCE</p>
+
+      <h2>More than a car wash.</h2>
+
+      <p class="intro-copy">
+        Your vehicle deserves care that goes beyond the surface.
+        Explore our detailing services and find the right fit for
+        your vehicle and your needs.
       </p>
+
     </section>
+
+
+    <!-- SERVICES AND PRICING -->
+    <section class="services section" id="services">
+
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">OUR SERVICES</p>
+          <h2>Find your perfect detail.</h2>
+          <p>
+            Three ways to refresh your vehicle. Choose the service
+            that works best for you.
+          </p>
+        </div>
+
+
+        <!-- VEHICLE CATEGORIES -->
+        <div class="vehicle-grid">
+
+          <article class="vehicle-card">
+            <div class="vehicle-art">
+              <span>CAR ILLUSTRATION</span>
+            </div>
+            <h3>Cars</h3>
+            <p>Sedans and coupes</p>
+          </article>
+
+          <article class="vehicle-card">
+            <div class="vehicle-art">
+              <span>SUV ILLUSTRATION</span>
+            </div>
+            <h3>SUVs</h3>
+            <p>Crossovers and SUVs</p>
+          </article>
+
+          <article class="vehicle-card">
+            <div class="vehicle-art">
+              <span>TRUCK ILLUSTRATION</span>
+            </div>
+            <h3>Trucks</h3>
+            <p>Pickup trucks</p>
+          </article>
+
+        </div>
+
+
+        <!-- PRICING MATRIX -->
+        <div class="pricing-wrapper">
+
+          <table class="pricing-table">
+
+            <caption>
+              Pricing by service and vehicle type
+            </caption>
+
+            <thead>
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">🚗 Car</th>
+                <th scope="col">SUV</th>
+                <th scope="col">Truck</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+                <th scope="row">
+                  <span class="service-name">Interior Detail</span>
+                  <span class="service-description">
+                    Refresh your cabin
+                  </span>
+                </th>
+                <td><span class="price-placeholder">TBD</span></td>
+                <td><span class="price-placeholder">TBD</span></td>
+                <td><span class="price-placeholder">TBD</span></td>
+              </tr>
+
+              <tr>
+                <th scope="row">
+                  <span class="service-name">Exterior Detail</span>
+                  <span class="service-description">
+                    A clean, refreshed finish
+                  </span>
+                </th>
+                <td><span class="price-placeholder">TBD</span></td>
+                <td><span class="price-placeholder">TBD</span></td>
+                <td><span class="price-placeholder">TBD</span></td>
+              </tr>
+
+              <tr class="complete-row">
+                <th scope="row">
+                  <span class="service-name">Complete Detail</span>
+                  <span class="service-description">
+                    Interior + exterior
+                  </span>
+                </th>
+                <td><span class="price-placeholder">TBD</span></td>
+                <td><span class="price-placeholder">TBD</span></td>
+                <td><span class="price-placeholder">TBD</span></td>
+              </tr>
+
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <p class="pricing-note">
+          Final prices and service inclusions are coming soon.
+          Additional charges, if applicable, will be explained
+          before confirming an appointment.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- OUR WORK -->
+    <section class="work section container" id="our-work">
+
+      <div class="section-heading">
+        <p class="eyebrow">THE DIFFERENCE IS IN THE DETAILS</p>
+        <h2>Our work speaks for itself.</h2>
+        <p>
+          This is where we'll showcase real before-and-after
+          photos and videos of our detailing work.
+        </p>
+      </div>
+
+      <div class="work-placeholder">
+        <div>
+          <span class="work-icon" aria-hidden="true">✳</span>
+          <h3>Real work. Real results.</h3>
+          <p>Our detailing gallery is coming soon.</p>
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- WHY US -->
+    <section class="why-us section">
+
+      <div class="container why-us-content">
+
+        <p class="eyebrow">WHY 915 LUNA</p>
+
+        <h2>Care in every detail.</h2>
+
+        <p>
+          We believe quality service starts with attention,
+          consistency, and respect for your vehicle.
+        </p>
+
+        <div class="values-grid">
+
+          <div class="value-item">
+            <span class="value-number">01</span>
+            <h3>Convenience</h3>
+            <p>Mobile service designed around your day.</p>
+          </div>
+
+          <div class="value-item">
+            <span class="value-number">02</span>
+            <h3>Attention</h3>
+            <p>A thoughtful approach to every vehicle.</p>
+          </div>
+
+          <div class="value-item">
+            <span class="value-number">03</span>
+            <h3>Transparency</h3>
+            <p>Clear services and pricing before you book.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- FAQ -->
+    <section class="faq section container" id="faq">
+
+      <div class="section-heading">
+        <p class="eyebrow">GOOD TO KNOW</p>
+        <h2>Frequently asked questions.</h2>
+      </div>
+
+      <details>
+        <summary>Where do you provide service?</summary>
+        <p>
+          We plan to offer mobile detailing in El Paso, Texas.
+          Exact service-area availability will be confirmed when booking.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I choose the right service?</summary>
+        <p>
+          Interior Detail focuses on the cabin, Exterior Detail
+          focuses on the outside, and Complete Detail combines both.
+          Final inclusions will be listed with each service.
+        </p>
+      </details>
+
+      <details>
+        <summary>Will vehicle size affect the price?</summary>
+        <p>
+          Yes. Pricing will vary by vehicle category. Any additional
+          charges for unusually heavy soil, stains, or pet hair will
+          be explained before the appointment is confirmed.
+        </p>
+      </details>
+
+      <details>
+        <summary>How do I book an appointment?</summary>
+        <p>
+          Our booking process is coming soon. Check back for details
+          on how to request your appointment.
+        </p>
+      </details>
+
+    </section>
+
+
+    <!-- BOOKING CTA -->
+    <section class="booking section" id="booking">
+
+      <div class="container booking-content">
+
+        <p class="eyebrow">YOUR VEHICLE, OUR ATTENTION</p>
+
+        <h2>Ready for a better kind of clean?</h2>
+
+        <p>
+          Our services and booking details are coming soon.
+        </p>
+
+        <a class="button" href="#services">
+          Explore Services <span aria-hidden="true">↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
   </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+
+    <div class="container footer-content">
+
+      <a class="brand footer-brand" href="#home">
+        <span class="brand-name">915 LUNA</span>
+        <span class="brand-subtitle">MOBILE DETAILING</span>
+      </a>
+
+      <p>Professional mobile detailing · El Paso, Texas</p>
+
+      <p class="copyright">
+        © <span id="current-year">2026</span> 915 Luna Mobile Detailing
+      </p>
+
+    </div>
+
+  </footer>
+
 </body>
-</html> 
+</html>
