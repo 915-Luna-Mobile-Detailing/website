@@ -332,33 +332,92 @@
       <details>
         <summary>How do I book an appointment?</summary>
         <p>
-          Our booking process is coming soon. Check back for details
-          on how to request your appointment.
+          Use our <a href="#booking">booking request form</a> to share your vehicle,
+          service, and preferred date. We will contact you to confirm availability
+          and pricing. Your appointment is confirmed only after we agree on the details.
         </p>
       </details>
 
     </section>
 
 
-    <!-- BOOKING CTA -->
-    <section class="booking section" id="booking">
-
+    <!-- BOOKING REQUEST: the browser sends named fields directly to Formspree. -->
+    <section class="booking section" id="booking" aria-labelledby="booking-title">
       <div class="container booking-content">
-
         <p class="eyebrow">YOUR VEHICLE, OUR ATTENTION</p>
-
-        <h2>Ready for a better kind of clean?</h2>
-
-        <p>
-          Our services and booking details are coming soon.
+        <h2 id="booking-title">Request your detail.</h2>
+        <p id="booking-help">
+          Tell us about your vehicle and preferred date. We'll contact you to
+          confirm availability, service details, and pricing before booking.
         </p>
 
-        <a class="button" href="#services">
-          Explore Services <span aria-hidden="true">↗</span>
-        </a>
-
+        <form class="booking-form" action="https://formspree.io/f/mnpjlzwl"
+              method="POST" aria-describedby="booking-help booking-privacy">
+          <p class="booking-form-note">Fields marked * are required.</p>
+          <div class="booking-fields">
+            <div class="booking-field">
+              <label for="booking-name">Full name *</label>
+              <input id="booking-name" name="name" type="text"
+                     autocomplete="name" maxlength="100" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-email">Email *</label>
+              <input id="booking-email" name="email" type="email"
+                     autocomplete="email" maxlength="254" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-phone">Phone number *</label>
+              <input id="booking-phone" name="phone" type="tel"
+                     autocomplete="tel" maxlength="30" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-area">Neighborhood or ZIP code *</label>
+              <input id="booking-area" name="service_area" type="text"
+                     placeholder="Example: East El Paso or 79936" maxlength="100" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-vehicle-type">Vehicle type *</label>
+              <select id="booking-vehicle-type" name="vehicle_type" required>
+                <option value="" disabled selected>Select your vehicle type</option>
+                <option value="Car">Car</option>
+                <option value="SUV">SUV</option>
+                <option value="Truck">Truck</option>
+              </select>
+            </div>
+            <div class="booking-field">
+              <label for="booking-vehicle">Vehicle year, make, and model *</label>
+              <input id="booking-vehicle" name="vehicle" type="text"
+                     placeholder="Example: 2021 Tesla Model 3" maxlength="150" required>
+            </div>
+            <div class="booking-field">
+              <label for="booking-service">Service *</label>
+              <select id="booking-service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="Interior Detail">Interior Detail</option>
+                <option value="Exterior Detail">Exterior Detail</option>
+                <option value="Complete Detail">Complete Detail</option>
+                <option value="Help me choose">Help me choose</option>
+              </select>
+            </div>
+            <div class="booking-field">
+              <label for="booking-date">Preferred date (optional)</label>
+              <input id="booking-date" name="preferred_date" type="date"
+                     aria-describedby="booking-date-help">
+              <small id="booking-date-help">A preference only; availability will be confirmed.</small>
+            </div>
+            <div class="booking-field booking-field-wide">
+              <label for="booking-message">Anything else? (optional)</label>
+              <textarea id="booking-message" name="message" rows="4" maxlength="2000"
+                        placeholder="Pet hair, stains, preferred time of day, or questions"></textarea>
+            </div>
+          </div>
+          <p id="booking-privacy" class="booking-form-note">
+            Your details will be sent through Formspree so we can respond to your
+            request. Submitting this form does not confirm an appointment.
+          </p>
+          <button class="button" type="submit">Send Booking Request <span aria-hidden="true">↗</span></button>
+        </form>
       </div>
-
     </section>
 
   </main>
