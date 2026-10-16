@@ -829,3 +829,73 @@ summary:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+/* BOOKING REQUEST FORM */
+.booking-form {
+  margin-top: 32px;
+  padding: clamp(20px, 4vw, 36px);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-surface);
+  color: var(--color-text);
+  text-align: left;
+}
+.booking-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.booking-field { min-width: 0; }
+.booking-field-wide { grid-column: 1 / -1; }
+.booking-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.booking-field input,
+.booking-field select,
+.booking-field textarea {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  padding: 12px;
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-button);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 1rem;
+}
+.booking-field textarea { resize: vertical; }
+.booking-field input:focus-visible,
+.booking-field select:focus-visible,
+.booking-field textarea:focus-visible {
+  outline: 3px solid var(--color-teal-dark);
+  outline-offset: 3px;
+}
+.booking-field small {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-muted);
+  font-size: 0.78rem;
+}
+.booking .booking-form-note {
+  margin: 0 0 24px;
+  color: var(--color-muted);
+  font-size: 0.82rem;
+}
+.booking #booking-privacy { margin-top: 24px; }
+.booking-form .button {
+  background: var(--color-teal-dark);
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: inherit;
+}
+.booking-form .button:hover { background: var(--color-text); }
+.faq details a { text-decoration: underline; }
+@media (max-width: 600px) {
+  .booking-fields { grid-template-columns: 1fr; }
+  .booking-form .button { width: 100%; }
+}
